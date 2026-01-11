@@ -20,7 +20,12 @@
 
   <button id="newMember">+</button>
   <script>
-    alert('JS RUNNING');
+        alert("script loaded");
+    document.getElementById("newMember").onClick = () => {
+      const li = document.createElement("li");
+      li.textContent = "New item";
+      document.getelementById("members").appendChild(li);
+    }; 
   </script>
 </body>
 </html>
