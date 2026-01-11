@@ -22,9 +22,8 @@
   <script>
         alert("script loaded");
     document.getElementById("newMember").onClick = () => {
-      const li = document.createElement("li");
-      li.textContent = "New item";
-      document.getelementById("members").appendChild(li);
+      document.getElementById("members")
+        .insertAdjacentHTML("beforeend", "<li>New item</li>");
     }; 
   </script>
 </body>
