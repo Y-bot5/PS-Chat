@@ -14,8 +14,17 @@
 </head>
 <body>
   <header styles="text-align: center">Peanus Squad <span class="italic">Chat </span>Members:</header>
+  <ul id="members">
+    <li>Harry</li>
+  </ul>
 
+  <button id="newMember">+</button>
   <script>
+    document.getElementById("newMember").onClick = () => {
+      const li = document.createElement("li");
+      li.textContent = "New item";
+      document.getelementById("members").appendChild(li);
+    }; 
   </script>
 </body>
 </html>

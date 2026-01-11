@@ -6,3 +6,8 @@ header {
 .italic {
   font-style: italic;
 }
+
+#newMember {
+  font-size: 16px;
+  text-align: right;
+}
