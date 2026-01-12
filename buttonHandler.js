@@ -1,11 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-      const addBtn = document.getElementById("newMember");
-        const list = document.getElementById("members");
+    const newMemberBtn = document.getElementById("newMember");
+      const members = document.getElementById("members");
+        const memberNameInput = document.getElementById("memberName");
 
-          addBtn.addEventListener("click", () => {
-              const li = document.createElement("li");
-                  li.textContent = "New item";
-                      list.appendChild(li);
-                        });
-                        });
-                        console.log("buttonHandler.js loaded");
+          // Load saved members from localStorage
+            const savedMembers = JSON.parse(localStorage.getItem("membersList")) || [];
+              savedMembers.forEach(name => {
+                  const li = document.createElement("li");
+                      li.textContent = name;
+                          members.appendChild(li);
+                            });
+
+                              // Add new member
+                                newMemberBtn.addEventListener("click", () => {
+                                    const name = memberNameInput.value.trim();
+                                        if (!name) return; // ignore empty names
+
+                                            // Add to list in DOM
+                                                const li = document.createElement("li");
+                                                    li.textContent = name;
+                                                        members.appendChild(li);
+
+                                                            // Save to localStorage
+                                                                savedMembers.push(name);
+                                                                    localStorage.setItem("membersList", JSON.stringify(savedMembers));
+
+                                                                        // Clear input
+                                                                            memberNameInput.value = "";
+                                                                              });
+                                                                              });
+                                                                              
+})
