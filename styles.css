@@ -6,24 +6,3 @@ header {
 .italic {
   font-style: italic;
 }
-
-/* Container for input + button */
-.input-area {
-  display: flex;
-    justify-content: flex-end; /* push everything to the right */
-      gap: 8px; /* space between input and button */
-        margin-bottom: 12px; /* space below for the list */
-        }
-
-        /* Optional: make input and button look nicer */
-        #memberName {
-          padding: 6px 10px;
-            font-size: 16px;
-            }
-
-            #newMember {
-              padding: 6px 12px;
-                font-size: 16px;
-                  cursor: pointer;
-                  }
-                  
