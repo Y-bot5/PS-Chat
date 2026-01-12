@@ -18,13 +18,9 @@
     <li>Harry</li>
   </ul>
 
-  <button id="newMember">+</button>
-  <script>
-        alert("script loaded");
-    document.getElementById("newMember").onClick = () => {
-      document.getElementById("members")
-        .insertAdjacentHTML("beforeend", "<li>New item</li>");
-    }; 
-  </script>
+  <div styles="text-align: right">
+    <button id="newMember">+</button>
+  </div>
+  <script src="buttonHandler.js" defer></script>
 </body>
 </html>
