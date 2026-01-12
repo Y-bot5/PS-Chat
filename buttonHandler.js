@@ -8,3 +8,4 @@ document.addEventListener("DOMContentLoaded", () => {
                       list.appendChild(li);
                         });
                         });
+                        console.log("buttonHandler.js loaded");
