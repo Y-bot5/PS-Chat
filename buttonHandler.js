@@ -1,33 +1,63 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const newMemberBtn = document.getElementById("newMember");
-      const members = document.getElementById("members");
-        const memberNameInput = document.getElementById("memberName");
+      const newMemberBtn = document.getElementById("newMember"); // button
+        const members = document.getElementById("members");       // ul
+          const memberNameInput = document.getElementById("memberName"); // input
 
-          // Load saved members from localStorage
-            const savedMembers = JSON.parse(localStorage.getItem("membersList")) || [];
-              savedMembers.forEach(name => {
-                  const li = document.createElement("li");
-                      li.textContent = name;
-                          members.appendChild(li);
-                            });
+            // Load saved members from localStorage
+              const savedMembers = JSON.parse(localStorage.getItem("membersList")) || [];
+                savedMembers.forEach(name => {
+                    const li = document.createElement("li");
+                        li.textContent = name;
+                            members.appendChild(li);
+                              });
 
-                              // Add new member
-                                newMember.addEventListener("click", () => {
-                                    const name = memberName.value.trim();
-                                        if (!name) return; // ignore empty names
+                                // Add new member on button click
+                                  newMemberBtn.addEventListener("click", () => {
+                                      const name = memberNameInput.value.trim();
+                                          if (!name) return; // ignore empty names
 
-                                            // Add to list in DOM
-                                                const li = document.createElement("li");
-                                                    li.textContent = name;
-                                                        members.appendChild(li);
+                                              // Add to DOM
+                                                  const li = document.createElement("li");
+                                                      li.textContent = name;
+                                                          members.appendChild(li);
 
-                                                            // Save to localStorage
-                                                                savedMembers.push(name);
-                                                                    localStorage.setItem("membersList", JSON.stringify(savedMembers));
+                                                              // Save to localStorage
+                                                                  savedMembers.push(name);
+                                                                      localStorage.setItem("membersList", JSON.stringify(savedMembers));
 
-                                                                        // Clear input
-                                                                            memberNameInput.value = "";
-                                                                              });
-                                                                              });
-                                                                              
+                                                                          // Clear input
+                                                                              memberNameInput.value = "";
+                                                                                });
+                                                                                });
+                                                                                document.addEventListener("DOMContentLoaded", () => {
+                                                                                  const newMemberBtn = document.getElementById("newMember"); // button
+                                                                                    const members = document.getElementById("members");       // ul
+                                                                                      const memberNameInput = document.getElementById("memberName"); // input
+
+                                                                                        // Load saved members from localStorage
+                                                                                          const savedMembers = JSON.parse(localStorage.getItem("membersList")) || [];
+                                                                                            savedMembers.forEach(name => {
+                                                                                                const li = document.createElement("li");
+                                                                                                    li.textContent = name;
+                                                                                                        members.appendChild(li);
+                                                                                                          });
+
+                                                                                                            // Add new member on button click
+                                                                                                              newMemberBtn.addEventListener("click", () => {
+                                                                                                                  const name = memberNameInput.value.trim();
+                                                                                                                      if (!name) return; // ignore empty names
+
+                                                                                                                          // Add to DOM
+                                                                                                                              const li = document.createElement("li");
+                                                                                                                                  li.textContent = name;
+                                                                                                                                      members.appendChild(li);
+
+                                                                                                                                          // Save to localStorage
+                                                                                                                                              savedMembers.push(name);
+                                                                                                                                                  localStorage.setItem("membersList", JSON.stringify(savedMembers));
+
+                                                                                                                                                      // Clear input
+                                                                                                                                                          memberNameInput.value = "";
+                                                                                                                                                            });
+                                                                                                                                                            });
 })
