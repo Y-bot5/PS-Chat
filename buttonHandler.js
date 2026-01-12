@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
       const newMemberBtn = document.getElementById("newMember"); // button
         const members = document.getElementById("members");       // ul
           const memberNameInput = document.getElementById("memberName"); // input
@@ -59,5 +58,3 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                                                                                                       // Clear input
                                                                                                                                                           memberNameInput.value = "";
                                                                                                                                                             });
-                                                                                                                                                            });
-})
