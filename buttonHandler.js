@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             });
 
                               // Add new member
-                                newMemberBtn.addEventListener("click", () => {
-                                    const name = memberNameInput.value.trim();
+                                newMember.addEventListener("click", () => {
+                                    const name = memberName.value.trim();
                                         if (!name) return; // ignore empty names
 
                                             // Add to list in DOM
