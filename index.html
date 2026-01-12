@@ -4,6 +4,8 @@
   <meta charset="utf-8">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
+  <script src="buttonHandler.js" defer></script>
+
   <link rel="icon" href="/favicon.ico" sizes="any">  
   <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" hef="icon-192.png">
@@ -13,14 +15,13 @@
   <title>P.S. Chat</title>
 </head>
 <body>
+  <div styles="text-align: right">
+    <button id="newMember" type="button">+</button>
+  </div>
+
   <header styles="text-align: center">Peanus Squad <span class="italic">Chat </span>Members:</header>
   <ul id="members">
     <li>Harry</li>
   </ul>
-
-  <div styles="text-align: right">
-    <button id="newMember">+</button>
-  </div>
-  <script src="buttonHandler.js" defer></script>
 </body>
 </html>
